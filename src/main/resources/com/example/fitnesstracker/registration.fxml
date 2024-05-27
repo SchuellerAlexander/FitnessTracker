@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="231.0" prefWidth="351.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fitnesstracker.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <GridPane prefHeight="76.0" prefWidth="276.0">
+        <children>
+            <Label fx:id="LabelUsername" prefHeight="17.0" prefWidth="165.0" text="Username" GridPane.rowIndex="1" />
+            <Label fx:id="LabelEMail" text="E-Mail" GridPane.rowIndex="4" />
+            <TextField fx:id="TextFieldEMail" prefHeight="25.0" prefWidth="55.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="TextFieldPassword" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Button fx:id="RegisterButton" mnemonicParsing="false" text="Register" GridPane.columnIndex="0" GridPane.rowIndex="6" GridPane.halignment="CENTER" />
+            <Button fx:id="LoginButton" mnemonicParsing="false" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="6" GridPane.halignment="CENTER" />
+        </children>
+        <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" />
+            <RowConstraints />
+            <RowConstraints />
+        </rowConstraints>
+    </GridPane>
+</VBox>
