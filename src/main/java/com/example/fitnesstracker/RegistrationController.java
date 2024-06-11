@@ -60,7 +60,7 @@ public class RegistrationController {
                         LabelInformation.setText("Username already exists");
                     }
                 }
-                // aufrufen von inputHeightWeight
+                openInputHeightWeight();
 
 
 
