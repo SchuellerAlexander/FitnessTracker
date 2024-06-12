@@ -12,11 +12,9 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 
 public class RegistrationController {
@@ -40,46 +38,32 @@ public class RegistrationController {
         ConnectDB db = new ConnectDB();
         Connection connection = db.getConnection();
         if (connection != null) {
-
             try {
-
                 Statement statement = connection.createStatement();
-                String createTable = "CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY, password Integer," +
+                // Ensure the table name is consistent
+                String createTable = "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT, password TEXT," +
                         " name TEXT, weight Double, height Double, caloriesGoal Integer, caloriesEatenToday Integer, " +
                         "stepsGoal Integer, stepsToday Integer)";
                 statement.executeUpdate(createTable);
 
-                ResultSet resultSet = statement.executeQuery("SELECT COUNT(id) AS user_count FROM users;");
-                int userCount = resultSet.getInt("user_count");
-                for (int i = 0; i < userCount; i++) {
-                    // überprüfen ob der username an der Stelle i == dem LabelUsername ist
-                    if(InputUsername.toString().equals(String.valueOf(statement.executeQuery("Select * from users where id = " + i)))){
-                        if(InputPassword.getText().toString().equals(String.valueOf(statement.executeQuery("Select * from users where id = " + i)))){
-                            LabelInformation.setText("User already exists");
-                        }
-                        LabelInformation.setText("Username already exists");
-                    }
+                // Efficiently check if user exists
+                String query = "SELECT username FROM users WHERE username = ?";
+                PreparedStatement pstmt = connection.prepareStatement(query);
+                pstmt.setString(1, InputUsername.getText());
+                ResultSet resultSet = pstmt.executeQuery();
+                if (resultSet.next()) {
+                    LabelInformation.setText("Username already exists");
+                } else {
+                    // Insert new user logic here
+                    openInputHeightWeight();
                 }
-                openInputHeightWeight();
-
-
-
-
             } catch (SQLException e) {
-
                 e.printStackTrace();
-
             } finally {
-
                 db.closeConnection();
-
             }
-
         } else {
-
             System.out.println("Connection failed.");
-
-
         }
     }
 
@@ -88,49 +72,41 @@ public class RegistrationController {
         ConnectDB db = new ConnectDB();
         Connection connection = db.getConnection();
         if (connection != null) {
-
             try {
-
                 Statement statement = connection.createStatement();
-                String createTable = "CREATE TABLE IF NOT EXISTS user (id INTEGER PRIMARY KEY, password Integer," +
+                // Ensure the table name is consistent and the table exists
+                String createTable = "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT, password TEXT," +
                         " name TEXT, weight Double, height Double, caloriesGoal Integer, caloriesEatenToday Integer, " +
                         "stepsGoal Integer, stepsToday Integer)";
                 statement.executeUpdate(createTable);
 
+                // Use a PreparedStatement to securely check user credentials
+                String query = "SELECT * FROM users WHERE username = ? AND password = ?";
+                PreparedStatement pstmt = connection.prepareStatement(query);
+                pstmt.setString(1, InputUsername.getText());
+                pstmt.setString(2, InputPassword.getText());
+                ResultSet resultSet = pstmt.executeQuery();
 
-                ResultSet resultSet = statement.executeQuery("SELECT COUNT(id) AS user_count FROM users;");
-                boolean userFound = false;
-                int userCount = resultSet.getInt("user_count");
-                for (int i = 0; i < userCount; i++) {
-                    // ueberprueft ob der username an der Stelle i == dem LabelUsername ist
-                    if(InputUsername.toString().equals(String.valueOf(statement.executeQuery("Select * from users where id = " + i)))){
-                        if(InputPassword.getText().toString().equals(String.valueOf(statement.executeQuery("Select * from users where id = " + i)))){
-                            openMainPage();
-                        }
-                        LabelInformation.setText("Password incorrect");
-                    }
+                if (resultSet.next()) {
+                    // Credentials are correct, open main page
+                    openMainPage();
+                } else {
+                    LabelInformation.setStyle("-fx-text-fill: red;");
+                    LabelInformation.setText("User not found or password incorrect");
                 }
-
-                LabelInformation.setText("User not found");
-
-
             } catch (SQLException e) {
-
                 e.printStackTrace();
-
+                LabelInformation.setText("Database error occurred.");
             } finally {
-
                 db.closeConnection();
-
             }
-
         } else {
-
             System.out.println("Connection failed.");
-
-
+            LabelInformation.setText("Failed to connect to the database.");
         }
     }
+
+
     private void openMainPage() {
         try {
             // Laden der FXML-Datei für die Hauptseite
