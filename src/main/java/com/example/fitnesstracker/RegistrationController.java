@@ -33,6 +33,9 @@ public class RegistrationController {
     @FXML
     private Button LoginButton;
 
+    private static String username;
+    private static String password;
+
     @FXML
     private void register() {
         ConnectDB db = new ConnectDB();
@@ -89,6 +92,8 @@ public class RegistrationController {
 
                 if (resultSet.next()) {
                     // Credentials are correct, open main page
+                    username = InputUsername.toString();
+                    password = InputPassword.toString();
                     openMainPage();
                 } else {
                     LabelInformation.setStyle("-fx-text-fill: red;");
@@ -145,4 +150,11 @@ public class RegistrationController {
         }
     }
 
+    public static String getInputUsername() {
+        return username;
+    }
+
+    public static String getInputPassword() {
+        return password;
+    }
 }
