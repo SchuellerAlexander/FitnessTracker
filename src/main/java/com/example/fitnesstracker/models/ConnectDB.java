@@ -20,7 +20,7 @@ public class ConnectDB {
 
     public ConnectDB() {
 
-        String url = "jdbc:sqlite:mydb.db"; // Specify your database URL
+        String url = "jdbc:sqlite:users.db"; // Specify your database URL
 
         try {
 

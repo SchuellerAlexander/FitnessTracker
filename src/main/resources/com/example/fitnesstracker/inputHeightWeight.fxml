@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.fitnesstracker.InputHeightWeightController">
+    <Label text="Bitte geben Sie Ihre Größe und Gewicht ein:"/>
+
+    <Label text="Größe (cm):"/>
+    <TextField fx:id="heightTextField" promptText="In Zentimetern"/>
+
+    <Label text="Gewicht (kg):"/>
+    <TextField fx:id="weightTextField" promptText="In Kilogramm"/>
+
+    <Button text="Speichern" onAction="#save" mnemonicParsing="false"/>
+</VBox>
