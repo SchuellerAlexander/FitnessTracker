@@ -12,7 +12,7 @@ public class InputHeightWeightController{
     @FXML
     private TextField heightTextField;
 
-    private ConnectDB db = new ConnectDB();
+    private final ConnectDB db = new ConnectDB();
 
     @FXML
     public void save() {

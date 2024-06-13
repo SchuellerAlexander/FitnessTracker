@@ -12,16 +12,12 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
-import java.awt.*;
 import java.io.IOException;
 import java.sql.*;
 
 
 public class RegistrationController {
-    @FXML
-    private Label LabelUsername;
-    @FXML
-    private Label LabelEMail;
+
     @FXML
     private Label LabelInformation;
     @FXML
@@ -30,8 +26,7 @@ public class RegistrationController {
     private TextField InputPassword;
     @FXML
     private Button RegisterButton;
-    @FXML
-    private Button LoginButton;
+
 
     private static String username;
     private static String password;
@@ -50,9 +45,9 @@ public class RegistrationController {
                 statement.executeUpdate(createTable);
 
                 String query = "SELECT username FROM users WHERE username = ?";
-                PreparedStatement pstmt = connection.prepareStatement(query);
-                pstmt.setString(1, InputUsername.getText());
-                ResultSet resultSet = pstmt.executeQuery();
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1, InputUsername.getText());
+                ResultSet resultSet = preparedStatement.executeQuery();
                 if (resultSet.next()) {
                     LabelInformation.setText("Username already exists");
                 } else {
@@ -85,10 +80,10 @@ public class RegistrationController {
 
                 // Use a PreparedStatement to securely check user credentials
                 String query = "SELECT * FROM users WHERE username = ? AND password = ?";
-                PreparedStatement pstmt = connection.prepareStatement(query);
-                pstmt.setString(1, InputUsername.getText());
-                pstmt.setString(2, InputPassword.getText());
-                ResultSet resultSet = pstmt.executeQuery();
+                PreparedStatement preparedStatement = connection.prepareStatement(query);
+                preparedStatement.setString(1, InputUsername.getText());
+                preparedStatement.setString(2, InputPassword.getText());
+                ResultSet resultSet = preparedStatement.executeQuery();
 
                 if (resultSet.next()) {
                     // Credentials are correct, open main page
