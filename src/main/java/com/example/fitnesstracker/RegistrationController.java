@@ -49,7 +49,6 @@ public class RegistrationController {
                         "stepsGoal Integer, stepsToday Integer)";
                 statement.executeUpdate(createTable);
 
-                // Efficiently check if user exists
                 String query = "SELECT username FROM users WHERE username = ?";
                 PreparedStatement pstmt = connection.prepareStatement(query);
                 pstmt.setString(1, InputUsername.getText());
@@ -57,7 +56,8 @@ public class RegistrationController {
                 if (resultSet.next()) {
                     LabelInformation.setText("Username already exists");
                 } else {
-                    // Insert new user logic here
+                    username = InputUsername.getText();
+                    password = InputPassword.getText();
                     openInputHeightWeight();
                 }
             } catch (SQLException e) {
@@ -92,8 +92,8 @@ public class RegistrationController {
 
                 if (resultSet.next()) {
                     // Credentials are correct, open main page
-                    username = InputUsername.toString();
-                    password = InputPassword.toString();
+                    username = InputUsername.getText();
+                    password = InputPassword.getText();
                     openMainPage();
                 } else {
                     LabelInformation.setStyle("-fx-text-fill: red;");
