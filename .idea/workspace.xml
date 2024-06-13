@@ -4,10 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf77cbf1-9863-4ea5-87d6-656e58fa7bf0" name="Changes" comment="Registerpage is finally working. User is inserted into DB.">
+    <list default="true" id="bf77cbf1-9863-4ea5-87d6-656e58fa7bf0" name="Changes" comment="Fixed some warnings">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/fitnesstracker/inputHeightWeight.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/fitnesstracker/inputHeightWeight.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/InputHeightWeightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/InputHeightWeightController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/RegistrationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/InputHeightWeightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/InputHeightWeightController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/RegistrationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/inputHeightWeight.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/inputHeightWeight.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,7 +129,8 @@
       <workItem from="1717672805605" duration="286000" />
       <workItem from="1717748762036" duration="113000" />
       <workItem from="1718262264007" duration="431000" />
-      <workItem from="1718264915326" duration="1934000" />
+      <workItem from="1718264915326" duration="2682000" />
+      <workItem from="1718272153681" duration="373000" />
     </task>
     <task id="LOCAL-00001" summary="Added Mainpage">
       <option name="closed" value="true" />
@@ -184,7 +188,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718269998724</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Changed design inputHeightWeight.fxml">
+      <option name="closed" value="true" />
+      <created>1718271207768</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1718271207768</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Fixed some warnings">
+      <option name="closed" value="true" />
+      <created>1718271633226</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1718271633226</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,17 +216,8 @@
     <MESSAGE value="added input height and weight" />
     <MESSAGE value="Everything" />
     <MESSAGE value="Registerpage is finally working. User is inserted into DB." />
-    <option name="LAST_COMMIT_MESSAGE" value="Registerpage is finally working. User is inserted into DB." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/InputHeightWeightController.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Changed design inputHeightWeight.fxml" />
+    <MESSAGE value="Fixed some warnings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed some warnings" />
   </component>
 </project>

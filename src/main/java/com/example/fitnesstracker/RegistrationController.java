@@ -107,7 +107,7 @@ public class RegistrationController {
     }
 
 
-    private void openMainPage() {
+    public void openMainPage() {
         try {
             // Laden der FXML-Datei für die Hauptseite
             FXMLLoader loader = new FXMLLoader(getClass().getResource("mainpage.fxml"));
@@ -126,7 +126,7 @@ public class RegistrationController {
         }
     }
 
-    private void openInputHeightWeight() {
+    public void openInputHeightWeight() {
         try {
             // Laden der FXML-Datei für die Hauptseite
             FXMLLoader loader = new FXMLLoader(getClass().getResource("inputHeightWeight.fxml"));

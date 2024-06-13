@@ -4,15 +4,26 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
 
-<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.fitnesstracker.InputHeightWeightController">
-    <Label text="Bitte geben Sie Ihre Größe und Gewicht ein:"/>
+<!-- Start of VBox layout definition -->
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.fitnesstracker.InputHeightWeightController" style="-fx-background-color: #f0f0f0; -fx-border-color: #ccc; -fx-border-width: 2; -fx-border-radius: 5; -fx-padding: 20;">
 
-    <Label text="Größe (cm):"/>
-    <TextField fx:id="heightTextField" promptText="In Zentimetern"/>
+    <!-- Input instruction label -->
+    <Label text="Bitte geben Sie Ihre Größe und Gewicht ein:" style="-fx-font-size: 16px; -fx-text-fill: #333;"/>
 
-    <Label text="Gewicht (kg):"/>
-    <TextField fx:id="weightTextField" promptText="In Kilogramm"/>
+    <!-- Height input section -->
+    <VBox spacing="5.0">
+        <Label text="Größe (cm):" style="-fx-font-size: 14px;"/>
+        <TextField fx:id="heightTextField" promptText="In Zentimetern" style="-fx-prompt-text-fill: #aaa;"/>
+    </VBox>
 
-    <Button text="Speichern" onAction="#save" mnemonicParsing="false"/>
+    <!-- Weight input section -->
+    <VBox spacing="5.0">
+        <Label text="Gewicht (kg):" style="-fx-font-size: 14px;"/>
+        <TextField fx:id="weightTextField" promptText="In Kilogramm" style="-fx-prompt-text-fill: #aaa;"/>
+    </VBox>
+
+    <!-- Save button -->
+    <Button text="Speichern" onAction="#save" mnemonicParsing="false" style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-weight: bold;"/>
 </VBox>
