@@ -2,10 +2,14 @@ package com.example.fitnesstracker;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import java.io.IOException;
@@ -55,6 +59,11 @@ public class KalorienTrackingController {
         try {
             String tagesZeit = tagesZeitComboBox.getValue();
             String essen = essenTextField.getText();
+            if (kalorienTextField.getText().isEmpty() || proteineTextField.getText().isEmpty() || fettTextField.getText().isEmpty()) {
+                // Leere Felder behandeln
+                System.out.println("Bitte füllen Sie alle Felder aus, bevor Sie auf 'Tracken' klicken.");
+                return;
+            }
             int kalorien = Integer.parseInt(kalorienTextField.getText());
             int proteine = Integer.parseInt(proteineTextField.getText());
             int fett = Integer.parseInt(fettTextField.getText());
@@ -63,6 +72,9 @@ public class KalorienTrackingController {
                     mainPageController.erreichteKalorien + kalorien,
                     mainPageController.verbrannteKalorien
             );
+
+            // Nach dem Tracken zurück zur Hauptseite wechseln
+            switchToMainPage();
         } catch (NumberFormatException e) {
             e.printStackTrace();
         }
@@ -71,6 +83,11 @@ public class KalorienTrackingController {
     @FXML
     private void handleSearchButton(ActionEvent event) {
         String query = essenTextField.getText();
+        if (query.isEmpty()) {
+            // Leere Eingabe behandeln
+            System.out.println("Bitte geben Sie ein Nahrungsmittel ein, bevor Sie auf 'Suchen' klicken.");
+            return;
+        }
         String apiKey = "bveGGB5WHVxfqjQrY7qh1Dn126Itm9UEffqcKeG6";
         String urlString = "https://api.nal.usda.gov/fdc/v1/foods/search?query=" + query + "&api_key=" + apiKey;
 
@@ -94,15 +111,46 @@ public class KalorienTrackingController {
 
                 if (foods.length() > 0) {
                     JSONObject food = foods.getJSONObject(0);
-                    int calories = food.getInt("calories");
-                    int proteins = food.getInt("protein");
-                    int fats = food.getInt("fat");
+                    JSONArray foodNutrients = food.getJSONArray("foodNutrients");
 
+                    int calories = getNutrientValue(foodNutrients, 1008); // 1008 is the nutrient ID for calories
+                    int proteins = getNutrientValue(foodNutrients, 1003); // 1003 is the nutrient ID for proteins
+                    int fats = getNutrientValue(foodNutrients, 1004); // 1004 is the nutrient ID for fats
+                    ConectedPerson.INSTANCE.setCaloriesEatenToday(ConectedPerson.INSTANCE.getCaloriesEatenToday() + calories);
                     kalorienTextField.setText(String.valueOf(calories));
                     proteineTextField.setText(String.valueOf(proteins));
                     fettTextField.setText(String.valueOf(fats));
+                } else {
+                    System.out.println("Keine Nährwertinformationen für das eingegebene Nahrungsmittel gefunden.");
                 }
+            } else {
+                System.out.println("Fehler bei der Verbindung zur API: " + responseCode);
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private int getNutrientValue(JSONArray foodNutrients, int nutrientId) {
+        for (int i = 0; i < foodNutrients.length(); i++) {
+            JSONObject nutrient = foodNutrients.getJSONObject(i);
+            if (nutrient.getInt("nutrientId") == nutrientId) {
+                return nutrient.getInt("value");
+            }
+        }
+        return 0; // default value if the nutrient is not found
+    }
+
+    private void switchToMainPage() {
+        try {
+            // Lade die Hauptseite
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fitnesstracker/mainpage.fxml"));
+            Parent root = loader.load();
+
+            // Zeige die Hauptseite im selben Fenster
+            Stage stage = (Stage) trackenButton.getScene().getWindow();
+            stage.setScene(new Scene(root));
+            stage.setTitle("Main Page");
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -34,19 +34,18 @@ public class Mainpagecontroller {
     @FXML
     private Button trackCaloriesButton;
 
-    private int zielKalorien = 0; // das kommt dann vom alex / bzw. aus der rechnung die am angang gemacht wird
-    public int erreichteKalorien = 0;
-    public int verbrannteKalorien = 0;
+    private int zielKalorien = ConectedPerson.INSTANCE.getCaloriesGoal(); // das kommt dann vom alex / bzw. aus der rechnung die am angang gemacht wird
+    public int erreichteKalorien;
+    public int verbrannteKalorien;
 
     @FXML
     public void initialize() {
-        // auf standart werte setzen
+        // auf standard Werte setzen
         pieChart.getData().addAll(
                 new Data("Erreichte Kalorien", erreichteKalorien),
                 new Data("Verbrannte Kalorien", verbrannteKalorien),
                 new Data("Übrige Kalorien", zielKalorien - erreichteKalorien - verbrannteKalorien)
         );
-
 
         zielKalorienText.setText("Ziel Kalorien: " + zielKalorien);
         erreichteKalorienText.setText("Kalorien die man schon erreicht hat: " + erreichteKalorien);
@@ -54,17 +53,16 @@ public class Mainpagecontroller {
     }
 
     @FXML
-    private void handleTrackCaloriesButton(ActionEvent event) { // bingt die auf die andere Page auf der du dann das ausfüllt / da kommen dann die genauern daten her
+    private void handleTrackCaloriesButton(ActionEvent event) {
         try {
             // Load the Calorie Tracker Page
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("KalorienTrackingPage.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fitnesstracker/KalorienTrackenPage.fxml"));
             Parent root = loader.load();
 
-            // Show the Calorie Tracker Page in a new window
-            Stage stage = new Stage();
+            // Show the Calorie Tracker Page in the same window
+            Stage stage = (Stage) trackCaloriesButton.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("Calorie Tracker Page");
-            stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -83,4 +81,3 @@ public class Mainpagecontroller {
         verbrannteKalorienText.setText("Verbrannte Kalorien: " + verbrannteKalorien);
     }
 }
-

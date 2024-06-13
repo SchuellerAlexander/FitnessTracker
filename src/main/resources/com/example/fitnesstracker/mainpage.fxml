@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.fitnesstracker.Mainpagecontroller">
    <children>
-      <PieChart layoutX="94.0" layoutY="47.0" prefHeight="153.0" prefWidth="230.0" />
+      <PieChart fx:id="pieChart" layoutX="94.0" layoutY="47.0" prefHeight="153.0" prefWidth="230.0" />
+      <Text fx:id="zielKalorienText" layoutX="362.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ziel Kalorien" />
+      <Text fx:id="erreichteKalorienText" layoutX="362.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kalorien die man schon erreicht hat" />
+      <Text fx:id="verbrannteKalorienText" layoutX="362.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verbrannte Kalorien" />
+      <TextField fx:id="schritteTextField" layoutX="362.0" layoutY="200.0" />
+      <Button fx:id="trackCaloriesButton" layoutX="362.0" layoutY="240.0" text="Track Calories" onAction="#handleTrackCaloriesButton"/>
       <Text layoutX="209.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main Page (Cooler NAME)" />
-      <Text layoutX="362.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ziel Kalorien" />
-      <Text layoutX="362.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kalorien die man schon erreicht hat" />
    </children>
 </AnchorPane>
