@@ -60,12 +60,19 @@ public class InputHeightWeightController {
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
             stage.setTitle("Main Page");
+
+            // Schließen Sie das aktuelle Fenster
+            Stage currentStage = (Stage) heightTextField.getScene().getWindow(); // oder ein anderes FXML-Element, das sich in Ihrer aktuellen Scene befindet
+            currentStage.close();
+
+            // Zeigen Sie das neue Fenster an
             stage.show();
         } catch (IOException e) {
             System.out.println("Failed to load the main page.");
             e.printStackTrace();
         }
     }
+
     private int calculateCalories(double weight, double height) {
         int age = 17;
         double bmr;
