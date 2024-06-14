@@ -4,25 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf77cbf1-9863-4ea5-87d6-656e58fa7bf0" name="Changes" comment="Fixed some warnings">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/ConectedPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Users.db" beforeDir="false" afterPath="$PROJECT_DIR$/Users.db" afterDir="false" />
+    <list default="true" id="bf77cbf1-9863-4ea5-87d6-656e58fa7bf0" name="Changes" comment="Created new Class from witch you can accsess all important information of a user, fixed mainpage class etc.">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/InputHeightWeightController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/InputHeightWeightController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/KalorienTrackingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/KalorienTrackingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/Mainpagecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/Mainpagecontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/fitnesstracker/mainpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/fitnesstracker/mainpage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/FitnessTrackerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/FitnessTrackerApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/InputHeightWeightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/InputHeightWeightController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/KalorienTrackingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/KalorienTrackingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/Mainpagecontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/Mainpagecontroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/mainpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/mainpage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/models/CodeForDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/models/CodeForDB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/models/ConnectDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/models/ConnectDB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,7 +133,7 @@
       <workItem from="1718273005017" duration="2772000" />
       <workItem from="1718277763254" duration="223000" />
       <workItem from="1718286669799" duration="3792000" />
-      <workItem from="1718290642886" duration="4595000" />
+      <workItem from="1718290642886" duration="4708000" />
     </task>
     <task id="LOCAL-00001" summary="Added Mainpage">
       <option name="closed" value="true" />
@@ -224,7 +207,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718271633226</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Created new Class from witch you can accsess all important information of a user, fixed mainpage class etc.">
+      <option name="closed" value="true" />
+      <created>1718295352891</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1718295352891</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +240,7 @@
     <MESSAGE value="Registerpage is finally working. User is inserted into DB." />
     <MESSAGE value="Changed design inputHeightWeight.fxml" />
     <MESSAGE value="Fixed some warnings" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed some warnings" />
+    <MESSAGE value="Created new Class from witch you can accsess all important information of a user, fixed mainpage class etc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Created new Class from witch you can accsess all important information of a user, fixed mainpage class etc." />
   </component>
 </project>
