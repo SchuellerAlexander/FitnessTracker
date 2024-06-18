@@ -89,7 +89,7 @@ public class Mainpagecontroller {
     @FXML
     private void acceptSteps(ActionEvent event) {
         ConectedPerson.INSTANCE.setStepsToday(Integer.parseInt(schritteTextField.getText()));
-        verbrannteKalorien = (int) (Double.valueOf(ConectedPerson.INSTANCE.getStepsToday()) * 0.5);
+        verbrannteKalorien = (int) (Double.valueOf(ConectedPerson.INSTANCE.getStepsToday()) * 0.2);
         updatePieChart(erreichteKalorien, verbrannteKalorien);
     }
 
