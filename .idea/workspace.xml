@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf77cbf1-9863-4ea5-87d6-656e58fa7bf0" name="Changes" comment="Created new Class from witch you can accsess all important information of a user, fixed mainpage class etc.">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="bf77cbf1-9863-4ea5-87d6-656e58fa7bf0" name="Changes" comment="Closes the input for weigth and heigth when opening mainpage">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Users.db" beforeDir="false" afterPath="$PROJECT_DIR$/Users.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/ConectedPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/ConectedPerson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/KalorienTrackingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/KalorienTrackingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/Mainpagecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/Mainpagecontroller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +138,9 @@
       <workItem from="1718277763254" duration="223000" />
       <workItem from="1718286669799" duration="3792000" />
       <workItem from="1718290642886" duration="4708000" />
+      <workItem from="1718345882705" duration="150000" />
+      <workItem from="1718348333946" duration="57000" />
+      <workItem from="1718691619199" duration="3548000" />
     </task>
     <task id="LOCAL-00001" summary="Added Mainpage">
       <option name="closed" value="true" />
@@ -215,7 +222,23 @@
       <option name="project" value="LOCAL" />
       <updated>1718295352891</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="chenges to pom file for better compatibility">
+      <option name="closed" value="true" />
+      <created>1718346023253</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1718346023254</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Closes the input for weigth and heigth when opening mainpage">
+      <option name="closed" value="true" />
+      <created>1718348388446</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1718348388446</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,6 +264,8 @@
     <MESSAGE value="Changed design inputHeightWeight.fxml" />
     <MESSAGE value="Fixed some warnings" />
     <MESSAGE value="Created new Class from witch you can accsess all important information of a user, fixed mainpage class etc." />
-    <option name="LAST_COMMIT_MESSAGE" value="Created new Class from witch you can accsess all important information of a user, fixed mainpage class etc." />
+    <MESSAGE value="chenges to pom file for better compatibility" />
+    <MESSAGE value="Closes the input for weigth and heigth when opening mainpage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Closes the input for weigth and heigth when opening mainpage" />
   </component>
 </project>

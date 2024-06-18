@@ -42,8 +42,10 @@ public enum ConectedPerson {
     }
 
     public int getCaloriesEatenToday() {
-        return Integer.parseInt(getUserAttribute("caloriesEatenToday"));
+        String value = getUserAttribute("caloriesEatenToday");
+        return value != null ? Integer.parseInt(value) : 0;
     }
+
 
     public int getStepsGoal() {
         return Integer.parseInt(getUserAttribute("stepsGoal"));

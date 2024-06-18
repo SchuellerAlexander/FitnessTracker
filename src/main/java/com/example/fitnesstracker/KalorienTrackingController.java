@@ -12,6 +12,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import org.json.JSONArray;
 import org.json.JSONObject;
+
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -60,7 +61,6 @@ public class KalorienTrackingController {
             String tagesZeit = tagesZeitComboBox.getValue();
             String essen = essenTextField.getText();
             if (kalorienTextField.getText().isEmpty() || proteineTextField.getText().isEmpty() || fettTextField.getText().isEmpty()) {
-                // Leere Felder behandeln
                 System.out.println("Bitte füllen Sie alle Felder aus, bevor Sie auf 'Tracken' klicken.");
                 return;
             }
@@ -73,7 +73,6 @@ public class KalorienTrackingController {
                     mainPageController.verbrannteKalorien
             );
 
-            // Nach dem Tracken zurück zur Hauptseite wechseln
             switchToMainPage();
         } catch (NumberFormatException e) {
             e.printStackTrace();
@@ -84,7 +83,6 @@ public class KalorienTrackingController {
     private void handleSearchButton(ActionEvent event) {
         String query = essenTextField.getText();
         if (query.isEmpty()) {
-            // Leere Eingabe behandeln
             System.out.println("Bitte geben Sie ein Nahrungsmittel ein, bevor Sie auf 'Suchen' klicken.");
             return;
         }
@@ -143,11 +141,14 @@ public class KalorienTrackingController {
 
     private void switchToMainPage() {
         try {
-            // Lade die Hauptseite
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fitnesstracker/mainpage.fxml"));
             Parent root = loader.load();
 
-            // Zeige die Hauptseite im selben Fenster
+            // Ensure the main page controller is passed correctly
+            Mainpagecontroller mainPageController = loader.getController();
+            mainPageController.initialize();
+
+            // Show the main page in the same window
             Stage stage = (Stage) trackenButton.getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.setTitle("Main Page");
