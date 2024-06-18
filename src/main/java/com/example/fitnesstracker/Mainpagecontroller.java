@@ -43,16 +43,7 @@ public class Mainpagecontroller {
     public void initialize() {
         System.out.println("Initializing Mainpagecontroller...");
 
-        if (pieChart == null) {
-            System.out.println("pieChart is null!");
-        } else {
-            System.out.println("pieChart is not null!");
-            pieChart.getData().addAll(
-                    new PieChart.Data("Erreichte Kalorien", erreichteKalorien),
-                    new PieChart.Data("Verbrannte Kalorien", verbrannteKalorien),
-                    new PieChart.Data("Übrige Kalorien", zielKalorien - erreichteKalorien - verbrannteKalorien)
-            );
-        }
+        updatePieChart(erreichteKalorien, verbrannteKalorien);
 
         if (zielKalorienText == null) {
             System.out.println("zielKalorienText is null!");
@@ -71,18 +62,18 @@ public class Mainpagecontroller {
         } else {
             verbrannteKalorienText.setText("Verbrannte Kalorien: " + verbrannteKalorien);
         }
-
     }
 
     public void updatePieChart(int erreichteKalorien, int verbrannteKalorien) {
         if (pieChart == null) {
             System.out.println("pieChart is null in updatePieChart!");
         } else {
+            int uebrigeKalorien = zielKalorien - erreichteKalorien + verbrannteKalorien;
             pieChart.getData().clear();
             pieChart.getData().addAll(
                     new PieChart.Data("Erreichte Kalorien", erreichteKalorien),
                     new PieChart.Data("Verbrannte Kalorien", verbrannteKalorien),
-                    new PieChart.Data("Übrige Kalorien", zielKalorien - erreichteKalorien - verbrannteKalorien)
+                    new PieChart.Data("Übrige Kalorien", uebrigeKalorien)
             );
         }
 

@@ -4,18 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf77cbf1-9863-4ea5-87d6-656e58fa7bf0" name="Changes" comment="Kalorientrackingpage is now working and the databasereqest works :D">
+    <list default="true" id="bf77cbf1-9863-4ea5-87d6-656e58fa7bf0" name="Changes" comment="Steps are now working">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/AdminTools/DatabaseUtility.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Users.db" beforeDir="false" afterPath="$PROJECT_DIR$/Users.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/ConectedPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/ConectedPerson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/Mainpagecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/Mainpagecontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/fitnesstracker/KalorienTrackenPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/fitnesstracker/KalorienTrackenPage.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/fitnesstracker/mainpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/fitnesstracker/mainpage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/InputHeightWeightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/InputHeightWeightController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/KalorienTrackenPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/KalorienTrackenPage.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/KalorienTrackingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/KalorienTrackingController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/Mainpagecontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/Mainpagecontroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/mainpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/mainpage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +73,20 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DatabaseUtility">
+    <configuration name="DatabaseUtility" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.fitnesstracker.AdminTools.DatabaseUtility" />
+      <module name="FitnessTracker" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.fitnesstracker.AdminTools.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FitnessTrackerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.fitnesstracker.FitnessTrackerApplication" />
       <module name="FitnessTracker" />
@@ -105,6 +113,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DatabaseUtility" />
         <item itemvalue="Application.FitnessTrackerApplication" />
       </list>
     </recent_temporary>
@@ -146,7 +155,8 @@
       <workItem from="1718290642886" duration="4708000" />
       <workItem from="1718345882705" duration="150000" />
       <workItem from="1718348333946" duration="57000" />
-      <workItem from="1718691619199" duration="5802000" />
+      <workItem from="1718691619199" duration="6037000" />
+      <workItem from="1718698297213" duration="671000" />
     </task>
     <task id="LOCAL-00001" summary="Added Mainpage">
       <option name="closed" value="true" />
@@ -252,7 +262,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718695266325</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Steps are now working">
+      <option name="closed" value="true" />
+      <created>1718697532222</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1718697532222</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,6 +299,7 @@
     <MESSAGE value="chenges to pom file for better compatibility" />
     <MESSAGE value="Closes the input for weigth and heigth when opening mainpage" />
     <MESSAGE value="Kalorientrackingpage is now working and the databasereqest works :D" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kalorientrackingpage is now working and the databasereqest works :D" />
+    <MESSAGE value="Steps are now working" />
+    <option name="LAST_COMMIT_MESSAGE" value="Steps are now working" />
   </component>
 </project>
