@@ -26,7 +26,8 @@ public class DatabaseUtility {
             System.out.println("2. View user by username");
             System.out.println("3. Update user data");
             System.out.println("4. Delete user");
-            System.out.println("5. Exit");
+            System.out.println("5. Delete all users");
+            System.out.println("6. Exit");
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
@@ -52,6 +53,9 @@ public class DatabaseUtility {
                     deleteUser(usernameToDelete);
                     break;
                 case 5:
+                    deleteAllUsers();
+                    break;
+                case 6:
                     System.out.println("Exiting...");
                     scanner.close();
                     closeConnection();
@@ -153,6 +157,24 @@ public class DatabaseUtility {
                     System.out.println("User deleted successfully.");
                 } else {
                     System.out.println("User not found.");
+                }
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private static void deleteAllUsers() {
+        if (checkConnection()) {
+            try {
+                String query = "DELETE FROM users";
+                PreparedStatement pstmt = connection.prepareStatement(query);
+
+                int rowsDeleted = pstmt.executeUpdate();
+                if (rowsDeleted > 0) {
+                    System.out.println("All users deleted successfully.");
+                } else {
+                    System.out.println("No users to delete.");
                 }
             } catch (SQLException e) {
                 e.printStackTrace();
