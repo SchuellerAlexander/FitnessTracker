@@ -21,38 +21,36 @@ public enum ConectedPerson {
 
     // Getter für das Passwort
     public String getPassword() {
-        return getUserAttribute("password");
+        return getUserAttribute("password", "");
     }
 
     // Weitere Getter für die anderen Attribute
     public String getName() {
-        return getUserAttribute("name");
+        return getUserAttribute("name", "");
     }
 
     public double getWeight() {
-        return Double.parseDouble(getUserAttribute("weight"));
+        return Double.parseDouble(getUserAttribute("weight", "0"));
     }
 
     public double getHeight() {
-        return Double.parseDouble(getUserAttribute("height"));
+        return Double.parseDouble(getUserAttribute("height", "0"));
     }
 
     public int getCaloriesGoal() {
-        return Integer.parseInt(getUserAttribute("caloriesGoal"));
+        return Integer.parseInt(getUserAttribute("caloriesGoal", "0"));
     }
 
     public int getCaloriesEatenToday() {
-        String value = getUserAttribute("caloriesEatenToday");
-        return value != null ? Integer.parseInt(value) : 0;
+        return Integer.parseInt(getUserAttribute("caloriesEatenToday", "0"));
     }
 
-
     public int getStepsGoal() {
-        return Integer.parseInt(getUserAttribute("stepsGoal"));
+        return Integer.parseInt(getUserAttribute("stepsGoal", "0"));
     }
 
     public int getStepsToday() {
-        return Integer.parseInt(getUserAttribute("stepsToday"));
+        return Integer.parseInt(getUserAttribute("stepsToday", "0"));
     }
 
     // Setter für die Attribute
@@ -89,8 +87,8 @@ public enum ConectedPerson {
     }
 
     // Methode zum Abrufen eines Benutzerattributs aus der Datenbank
-    private String getUserAttribute(String attribute) {
-        String value = null;
+    private String getUserAttribute(String attribute, String defaultValue) {
+        String value = defaultValue;
         Connection connection = db.getConnection();
         if (connection != null) {
             try {
@@ -100,6 +98,9 @@ public enum ConectedPerson {
                 ResultSet rs = pstmt.executeQuery();
                 if (rs.next()) {
                     value = rs.getString(attribute);
+                    if (value == null) {
+                        value = defaultValue;
+                    }
                 }
             } catch (SQLException e) {
                 e.printStackTrace();

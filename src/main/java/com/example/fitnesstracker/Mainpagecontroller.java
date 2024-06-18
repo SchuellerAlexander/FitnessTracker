@@ -18,6 +18,9 @@ public class Mainpagecontroller {
     private PieChart pieChart;
 
     @FXML
+    private Button acceptSteps;
+
+    @FXML
     private Text zielKalorienText;
 
     @FXML
@@ -33,8 +36,8 @@ public class Mainpagecontroller {
     private Button trackCaloriesButton;
 
     private int zielKalorien = ConectedPerson.INSTANCE.getCaloriesGoal();
-    public int erreichteKalorien;
-    public int verbrannteKalorien;
+    public int erreichteKalorien = ConectedPerson.INSTANCE.getCaloriesEatenToday();
+    public int verbrannteKalorien = (int) (Double.valueOf(ConectedPerson.INSTANCE.getStepsToday()) * 0.2);
 
     @FXML
     public void initialize() {
@@ -68,6 +71,7 @@ public class Mainpagecontroller {
         } else {
             verbrannteKalorienText.setText("Verbrannte Kalorien: " + verbrannteKalorien);
         }
+
     }
 
     public void updatePieChart(int erreichteKalorien, int verbrannteKalorien) {
@@ -89,6 +93,13 @@ public class Mainpagecontroller {
         if (verbrannteKalorienText != null) {
             verbrannteKalorienText.setText("Verbrannte Kalorien: " + verbrannteKalorien);
         }
+    }
+
+    @FXML
+    private void acceptSteps(ActionEvent event) {
+        ConectedPerson.INSTANCE.setStepsToday(Integer.parseInt(schritteTextField.getText()));
+        verbrannteKalorien = (int) (Double.valueOf(ConectedPerson.INSTANCE.getStepsToday()) * 0.5);
+        updatePieChart(erreichteKalorien, verbrannteKalorien);
     }
 
     @FXML

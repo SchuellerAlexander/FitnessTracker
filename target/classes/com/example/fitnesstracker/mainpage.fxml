@@ -12,8 +12,10 @@
       <Text fx:id="zielKalorienText" layoutX="362.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ziel Kalorien" />
       <Text fx:id="erreichteKalorienText" layoutX="362.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kalorien die man schon erreicht hat" />
       <Text fx:id="verbrannteKalorienText" layoutX="362.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Verbrannte Kalorien" />
-      <TextField fx:id="schritteTextField" layoutX="362.0" layoutY="200.0" />
-      <Button fx:id="trackCaloriesButton" layoutX="362.0" layoutY="240.0" text="Track Calories" onAction="#handleTrackCaloriesButton"/>
+      <TextField fx:id="schritteTextField" layoutX="57.0" layoutY="275.0" />
+      <Button fx:id="trackCaloriesButton" layoutX="381.0" layoutY="227.0" onAction="#handleTrackCaloriesButton" text="Track Calories" />
       <Text layoutX="209.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Main Page (Cooler NAME)" />
+      <Text layoutX="101.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Schritte : " />
+      <Button fx:id="acceptSteps" layoutX="98.0" layoutY="310.0" mnemonicParsing="false" text="Accept" onAction="#acceptSteps" />
    </children>
 </AnchorPane>

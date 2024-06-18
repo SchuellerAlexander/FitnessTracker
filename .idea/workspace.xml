@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf77cbf1-9863-4ea5-87d6-656e58fa7bf0" name="Changes" comment="Closes the input for weigth and heigth when opening mainpage">
+    <list default="true" id="bf77cbf1-9863-4ea5-87d6-656e58fa7bf0" name="Changes" comment="Kalorientrackingpage is now working and the databasereqest works :D">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Users.db" beforeDir="false" afterPath="$PROJECT_DIR$/Users.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/ConectedPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/ConectedPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/KalorienTrackingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/KalorienTrackingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/Mainpagecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/Mainpagecontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/fitnesstracker/KalorienTrackenPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/fitnesstracker/KalorienTrackenPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/fitnesstracker/mainpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/fitnesstracker/mainpage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/InputHeightWeightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/InputHeightWeightController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/KalorienTrackenPage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/KalorienTrackenPage.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/KalorienTrackingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/KalorienTrackingController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/Mainpagecontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/Mainpagecontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/mainpage.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/mainpage.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +146,7 @@
       <workItem from="1718290642886" duration="4708000" />
       <workItem from="1718345882705" duration="150000" />
       <workItem from="1718348333946" duration="57000" />
-      <workItem from="1718691619199" duration="3548000" />
+      <workItem from="1718691619199" duration="5802000" />
     </task>
     <task id="LOCAL-00001" summary="Added Mainpage">
       <option name="closed" value="true" />
@@ -238,7 +244,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718348388446</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Kalorientrackingpage is now working and the databasereqest works :D">
+      <option name="closed" value="true" />
+      <created>1718695266325</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1718695266325</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -266,6 +280,7 @@
     <MESSAGE value="Created new Class from witch you can accsess all important information of a user, fixed mainpage class etc." />
     <MESSAGE value="chenges to pom file for better compatibility" />
     <MESSAGE value="Closes the input for weigth and heigth when opening mainpage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Closes the input for weigth and heigth when opening mainpage" />
+    <MESSAGE value="Kalorientrackingpage is now working and the databasereqest works :D" />
+    <option name="LAST_COMMIT_MESSAGE" value="Kalorientrackingpage is now working and the databasereqest works :D" />
   </component>
 </project>
