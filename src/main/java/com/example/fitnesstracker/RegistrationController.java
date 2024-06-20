@@ -75,7 +75,7 @@ public class RegistrationController {
                 // Ensure the table name is consistent and the table exists
                 String createTable = "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT, password TEXT," +
                         " name TEXT, weight Double, height Double, caloriesGoal Integer, caloriesEatenToday Integer, " +
-                        "stepsGoal Integer, stepsToday Integer)";
+                        "stepsGoal Integer, stepsToday Integer, lastLogin Date)";
                 statement.executeUpdate(createTable);
 
                 // Use a PreparedStatement to securely check user credentials

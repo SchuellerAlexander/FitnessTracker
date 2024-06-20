@@ -1,5 +1,6 @@
 package com.example.fitnesstracker;
 
+import com.example.fitnesstracker.models.ConnectDB;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +17,10 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.text.ParseException;
 import java.util.Scanner;
 
 public class KalorienTrackingController {
@@ -154,6 +159,8 @@ public class KalorienTrackingController {
             stage.setTitle("Main Page");
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
         }
     }
 }

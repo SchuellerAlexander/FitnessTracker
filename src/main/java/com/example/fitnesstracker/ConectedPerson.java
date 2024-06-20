@@ -1,10 +1,10 @@
 package com.example.fitnesstracker;
 
 import com.example.fitnesstracker.models.ConnectDB;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+
+import java.sql.*;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 public enum ConectedPerson {
     INSTANCE;
@@ -72,6 +72,13 @@ public enum ConectedPerson {
 
     public void setCaloriesGoal(int caloriesGoal) {
         setUserAttribute("caloriesGoal", String.valueOf(caloriesGoal));
+    }
+    public void setLastLogin(Date date){
+        setUserAttribute("lastLogin", String.valueOf(date.getTime()));
+    }
+    public Date getLastLogin() throws ParseException {
+        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+        return (Date) formatter.parse(getUserAttribute("lastLogin", "2024.01.01"));
     }
 
     public void setCaloriesEatenToday(int caloriesEatenToday) {

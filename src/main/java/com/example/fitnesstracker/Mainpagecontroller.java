@@ -12,6 +12,11 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class Mainpagecontroller {
     @FXML
@@ -40,7 +45,24 @@ public class Mainpagecontroller {
     public int verbrannteKalorien = (int) (Double.valueOf(ConectedPerson.INSTANCE.getStepsToday()) * 0.2);
 
     @FXML
-    public void initialize() {
+    public void initialize() throws ParseException {
+        try {
+            ZonedDateTime now = ZonedDateTime.now();
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            String formattedNow = now.format(formatter);
+            Date lastLoginDate = ConectedPerson.INSTANCE.getLastLogin();
+            String formattedLastLogin = new SimpleDateFormat("yyyy-MM-dd").format(lastLoginDate);
+
+            if (!formattedNow.equals(formattedLastLogin)) {
+                ConectedPerson.INSTANCE.setCaloriesEatenToday(0);
+                ConectedPerson.INSTANCE.setStepsToday(0);
+            }
+            ConectedPerson.INSTANCE.setLastLogin(new java.sql.Date(Date.from(now.toInstant()).getTime()));
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+
         System.out.println("Initializing Mainpagecontroller...");
 
         updatePieChart(erreichteKalorien, verbrannteKalorien);
@@ -68,11 +90,10 @@ public class Mainpagecontroller {
         if (pieChart == null) {
             System.out.println("pieChart is null in updatePieChart!");
         } else {
-            int uebrigeKalorien = zielKalorien - erreichteKalorien + verbrannteKalorien;
+            int uebrigeKalorien = (zielKalorien + verbrannteKalorien) - erreichteKalorien;
             pieChart.getData().clear();
             pieChart.getData().addAll(
                     new PieChart.Data("Erreichte Kalorien", erreichteKalorien),
-                    new PieChart.Data("Verbrannte Kalorien", verbrannteKalorien),
                     new PieChart.Data("Übrige Kalorien", uebrigeKalorien)
             );
         }

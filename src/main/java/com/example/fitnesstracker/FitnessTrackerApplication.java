@@ -6,6 +6,9 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Calendar;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class FitnessTrackerApplication extends Application {
     @Override
@@ -18,6 +21,7 @@ public class FitnessTrackerApplication extends Application {
     }
 
     public static void main(String[] args) {
+        // Start the JavaFX application
         launch();
     }
 }
