@@ -23,9 +23,6 @@ public class Mainpagecontroller {
     private PieChart pieChart;
 
     @FXML
-    private Button acceptSteps;
-
-    @FXML
     private Text zielKalorienText;
 
     @FXML
@@ -40,9 +37,9 @@ public class Mainpagecontroller {
     @FXML
     private Button trackCaloriesButton;
 
-    private int zielKalorien = ConectedPerson.INSTANCE.getCaloriesGoal();
+    private final int zielKalorien = ConectedPerson.INSTANCE.getCaloriesGoal();
     public int erreichteKalorien = ConectedPerson.INSTANCE.getCaloriesEatenToday();
-    public int verbrannteKalorien = (int) (Double.valueOf(ConectedPerson.INSTANCE.getStepsToday()) * 0.2);
+    public int verbrannteKalorien = (int) ((double) ConectedPerson.INSTANCE.getStepsToday() * 0.2);
 
     @FXML
     public void initialize() throws ParseException {
@@ -108,14 +105,14 @@ public class Mainpagecontroller {
     }
 
     @FXML
-    private void acceptSteps(ActionEvent event) {
+    private void acceptSteps() {
         ConectedPerson.INSTANCE.setStepsToday(Integer.parseInt(schritteTextField.getText()));
-        verbrannteKalorien = (int) (Double.valueOf(ConectedPerson.INSTANCE.getStepsToday()) * 0.2);
+        verbrannteKalorien = (int) ((double) ConectedPerson.INSTANCE.getStepsToday() * 0.2);
         updatePieChart(erreichteKalorien, verbrannteKalorien);
     }
 
     @FXML
-    private void handleTrackCaloriesButton(ActionEvent event) {
+    private void handleTrackCaloriesButton() {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/fitnesstracker/KalorienTrackenPage.fxml"));
             Parent root = loader.load();

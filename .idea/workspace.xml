@@ -4,25 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf77cbf1-9863-4ea5-87d6-656e58fa7bf0" name="Changes" comment="Evrithing is now working correctly, i have updated the way the pie chart works, and i added a package admin tools, in that is a Tool named DatabaseUtility, it allows the admins to edit the database">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bf77cbf1-9863-4ea5-87d6-656e58fa7bf0" name="Changes" comment="Eaten Calories and steps are reset every day. &#10;Graphik of PieChart has been updated.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Users.db" beforeDir="false" afterPath="$PROJECT_DIR$/Users.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/ConectedPerson.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/ConectedPerson.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/FitnessTrackerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/FitnessTrackerApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/KalorienTrackingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/KalorienTrackingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/Mainpagecontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/Mainpagecontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/RegistrationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/RegistrationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/fitnesstracker/models/CodeForDB.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/FitnessTrackerApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/FitnessTrackerApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/InputHeightWeightController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/InputHeightWeightController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/KalorienTrackingController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/KalorienTrackingController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/Mainpagecontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/Mainpagecontroller.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/RegistrationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/RegistrationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/models/CodeForDB.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/models/ConnectDB.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/fitnesstracker/models/ConnectDB.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/module-info.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +156,7 @@
       <workItem from="1718691619199" duration="6037000" />
       <workItem from="1718698297213" duration="1099000" />
       <workItem from="1718784260723" duration="478000" />
-      <workItem from="1718864218847" duration="4842000" />
+      <workItem from="1718864218847" duration="5773000" />
     </task>
     <task id="LOCAL-00001" summary="Added Mainpage">
       <option name="closed" value="true" />
@@ -293,7 +278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718700027233</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Eaten Calories and steps are reset every day. &#10;Graphik of PieChart has been updated.">
+      <option name="closed" value="true" />
+      <created>1718869345720</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1718869345720</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -324,6 +317,7 @@
     <MESSAGE value="Kalorientrackingpage is now working and the databasereqest works :D" />
     <MESSAGE value="Steps are now working" />
     <MESSAGE value="Evrithing is now working correctly, i have updated the way the pie chart works, and i added a package admin tools, in that is a Tool named DatabaseUtility, it allows the admins to edit the database" />
-    <option name="LAST_COMMIT_MESSAGE" value="Evrithing is now working correctly, i have updated the way the pie chart works, and i added a package admin tools, in that is a Tool named DatabaseUtility, it allows the admins to edit the database" />
+    <MESSAGE value="Eaten Calories and steps are reset every day. &#10;Graphik of PieChart has been updated." />
+    <option name="LAST_COMMIT_MESSAGE" value="Eaten Calories and steps are reset every day. &#10;Graphik of PieChart has been updated." />
   </component>
 </project>

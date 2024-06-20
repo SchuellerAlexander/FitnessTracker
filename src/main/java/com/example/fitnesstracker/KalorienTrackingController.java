@@ -1,6 +1,6 @@
 package com.example.fitnesstracker;
 
-import com.example.fitnesstracker.models.ConnectDB;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +8,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import org.json.JSONArray;
@@ -17,16 +16,12 @@ import org.json.JSONObject;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.Scanner;
 
 public class KalorienTrackingController {
 
-    @FXML
-    private Text pageTitle;
+
 
     @FXML
     private ComboBox<String> tagesZeitComboBox;
@@ -46,9 +41,6 @@ public class KalorienTrackingController {
     @FXML
     private Button trackenButton;
 
-    @FXML
-    private Button searchButton;
-
     private Mainpagecontroller mainPageController;
 
     @FXML
@@ -61,7 +53,7 @@ public class KalorienTrackingController {
     }
 
     @FXML
-    private void handleTrackenButton(ActionEvent event) {
+    private void handleTrackenButton() {
         try {
             String tagesZeit = tagesZeitComboBox.getValue();
             String essen = essenTextField.getText();
